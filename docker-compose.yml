@@ -1,0 +1,12 @@
+version: '3.8'
+
+services:
+  reverse_ssh:
+    image: reversessh/reverse_ssh
+    ports:
+      - "2222:2222"
+    environment:
+      EXTERNAL_ADDRESS: "<SERVER_IP>:2222" # Replace with your IP
+      SEED_AUTHORIZED_KEYS: "" # Provide an SSH key here
+    volumes:
+      - ./data:/data
