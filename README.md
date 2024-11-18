@@ -19,3 +19,11 @@ Full documentation available on the link.
 - `ssh -J <SERVER_IP>:2222 <client_id>`: connects to a host
 - `scp -J <SERVER_IP>:2222 <client_id>:/etc/passwd`: downloads a file
 - `ssh -D 9050 -J <SERVER_IP>:2222 <client_id>`: sets up dynamic port forwarding
+
+## Setting up
+
+Pull the git repository on a server of your choice. `cd` into the folder and run `docker-compose up -d`
+
+## Adding access
+
+Create a file in `data/keys`. The filename will be a user's username, the contents will be used as `authorized_keys`. To create an administrator see `data/authorized_controllee_keys`
