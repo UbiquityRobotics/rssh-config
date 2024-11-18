@@ -10,6 +10,8 @@ Full documentation available on the link.
 > HTTPS has to be configured externally, like via NGINX (WIP)
 > For more information see [man in the middle](https://en.wikipedia.org/wiki/Man-in-the-middle_attack)
 
+- `link -l`: lists currently generated links
+- `link -r`: removes a link
 - `link`: generates a bootstrapper link. Example: `link --goos linux --goarch arm --goarm 7 --name picontrol --garble --upx`
   - `name` will generate a named link instead of a hash. This may be preferred.
   - `--goos linux` sets the OS to linux
