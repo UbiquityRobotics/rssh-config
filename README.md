@@ -3,6 +3,8 @@
 This document aims to provide some default configuration and commands for [Reverse-SSH](https://github.com/NHAS/reverse_ssh).
 Full documentation available on the link.
 
+For help with generating your own SSH key see [Generating your own SSH key](misc/sshkey.md)
+
 ## Using RSSH
 
 > [!CAUTION]
