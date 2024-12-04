@@ -9,3 +9,14 @@ services:
       - rssh.env
     volumes:
       - ./data:/data
+  nginx:
+    build:
+      context: ./nginx
+      dockerfile: Dockerfile
+    ports:
+      - "80:80"
+      - "443:443"
+    volumes:
+      - "./logs/nginx:/var/log/nginx/"
+      - "/etc/letsencrypt/live/rose.ubiquityrobotics.com/:/etc/letsencrypt/live/rose.ubiquityrobotics.com/:ro"
+      - "/etc/letsencrypt/archive/rose.ubiquityrobotics.com/:/etc/letsencrypt/archive/rose.ubiquityrobotics.com/:ro"
